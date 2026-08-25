@@ -1,0 +1,29 @@
+[tools]
+go = "1.25"
+
+[tasks.format]
+alias = "f"
+run = "gofmt -w ."
+
+[tasks.build]
+alias = "b"
+run = "go build ./..."
+
+[tasks.test]
+alias = "t"
+run = "go test -race ./..."
+
+# Encodes the Definition of Done from AGENT.md:
+# gofmt check -> vet -> build -> test (race)
+[tasks.check]
+run = """
+unformatted=$(gofmt -l .)
+if [ -n "$unformatted" ]; then
+  echo "unformatted files (run: mise run format):"
+  echo "$unformatted"
+  exit 1
+fi
+go vet ./...
+go build ./...
+go test -race ./...
+"""
