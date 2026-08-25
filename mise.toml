@@ -13,8 +13,6 @@ run = "go build ./..."
 alias = "t"
 run = "go test -race ./..."
 
-# Encodes the Definition of Done from AGENT.md:
-# gofmt check -> vet -> build -> test (race)
 [tasks.check]
 run = """
 unformatted=$(gofmt -l .)
