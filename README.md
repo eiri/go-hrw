@@ -1,7 +1,7 @@
 # go-hrw
 
 [![CI](https://github.com/eiri/go-hrw/actions/workflows/ci.yml/badge.svg)](https://github.com/eiri/go-hrw/actions/workflows/ci.yml)
-[![Go Reference](https://pkg.go.dev/badge.svg)](https://pkg.go.dev/github.com/eiri/go-hrw)
+[![Go Reference](https://pkg.go.dev/badge/github.com/eiri/go-hrw.svg)](https://pkg.go.dev/github.com/eiri/go-hrw)
 
 HRW (Highest Random Weight), aka rendezvous hashing, for Go. Maps keys to
 nodes stably under membership churn. Port of [joladev/hrw](https://github.com/joladev/hrw) (Elixir).
